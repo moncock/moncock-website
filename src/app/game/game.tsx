@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function HomePage() {
+export default function Game() {
     const classes = useStyles();
 
     return <Grid container className={classes.container} sx={{ mb: 8 }}></Grid>;
