@@ -1,17 +1,22 @@
 'use client';
-import { Grid } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-const useStyles = makeStyles({
-    container: {
-        display: 'flex',
-        justifyContent: 'flex-start',
-        flexDirection: 'column',
-        alignItems: 'center'
-    }
-});
+
+import Script from 'next/script';
 
 export default function Game() {
-    const classes = useStyles();
-
-    return <Grid container className={classes.container} sx={{ mb: 8 }}></Grid>;
+    const cacheBuster = Date.now(); // Cache-busting parameter
+    return (
+        <div>
+            <div id="hud">
+                <div id="score">Score: 0</div>
+                <div id="timer">Time Left: 10s</div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <audio id="punchSound" src="/audio/punch.mp3"></audio>
+            <Script
+                src={`/js/game.js?cb=${cacheBuster}`} // Cache-busting query parameter
+                strategy="lazyOnload"
+                onLoad={() => console.log('Script has loaded')}
+            />
+        </div>
+    );
 }
