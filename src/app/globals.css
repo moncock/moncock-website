@@ -35,10 +35,6 @@ img {
     display: block;
 }
 
-#gameCanvas {
-    border: 1px solid black;
-}
-
 #hud {
     position: absolute;
     top: 100px;
