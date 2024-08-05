@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- collection name -->
-    <title>Moncock Open Edition</title>
-    <!-- favicon -->
-    <!--
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- collection name -->
+        <title>Moncock Open Edition</title>
+        <!-- favicon -->
+        <!--
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -15,8 +15,8 @@
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="theme-color" content="#ffffff">
     -->
-    <!-- opengraph/twitter -->
-    <!--
+        <!-- opengraph/twitter -->
+        <!--
     <meta property="og:site_name" content="We are Moncock" />
     <meta property="og:title" content="Moncock Open Edition" />
     <meta property="og:description" content="We are Moncock" />
@@ -31,62 +31,127 @@
     <meta name="twitter:image:src" content="https://moncock.xyz/images/origin.png">
     <meta name="twitter:domain" content="moncock.xyz">
     -->
-    <!-- app -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="/css/launchpad.css" rel="stylesheet">
-  </head>
-  <body class="d-flex justify-content-center align-items-center">
-    <div class="top-bar">
-      <div><a href="/">HOME</a></div>
-    </div>
-    <div class="card" style="width: 20rem; height: fit-content;">
-      <img src="/images/origin.png" class="card-img-top">
-      <div class="card-body">
-        <!-- collection name -->
-        <h5 class="card-title">Moncock Open Edition</h5>
-        <h6 class="card-subtitle text-muted" id="supply">Minted: ...</h6>
-        <div class="links">
-          <!-- chain -->
-          <img data-bs-toggle="tooltip" data-bs-title="Monad Testnet" src="https://assets-global.website-files.com/647f71a77a2f4691b4fa23a7/647f71a77a2f4691b4fa2413_monad-fav-32x32_2.png">
-          <!-- contract -->
-          <a data-bs-toggle="tooltip" data-bs-title="Contract" href="https://sepolia.etherscan.io/address/0x136325681b0ca8cab9cef32dfa47bdbaae2c1bc9" target="_blank"><img src="https://etherscan.io/images/favicon3.ico"></a>
-          <!-- opensea -->
-          <a data-bs-toggle="tooltip" data-bs-title="OpenSea" href="https://testnets.opensea.io/collection/moncock-open-edition" target="_blank"><img src="https://opensea.io/static/images/favicon/32x32.png"></a>
+        <!-- app -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css"
+            rel="stylesheet"
+        />
+        <link href="/css/launchpad.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex justify-content-center align-items-center">
+        <div class="top-bar">
+            <div><a href="/game">HOME</a></div>
         </div>
-        <!-- description -->
-        <p class="card-text">We are Moncock</p>
-        <a id="connect" class="btn btn-primary w-100 disabled">Connect Wallet</a>
-        <!--input id="mint_qty" type="range" class="form-range d-none" min="1" max="1" step="1" value="1"-->
-        <a id="mint" class="btn btn-primary w-100 d-none">Mint</a>
-        <button id="minting" class="btn btn-primary w-100 d-none" type="button" disabled>
-          <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-          Processing
-        </button>
-        <a id="msg" class="btn btn-primary w-100 d-none disabled"></a>
-        <div class="text-center mt-2"><a id="disconnect" class="text-secondary-emphasis d-none" role="button">Disconnect 0xabc..789</a></div>
-      </div>
-    </div>
-    <!-- modal -->
-    <div class="modal fade" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">🎉 Mint Successful</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-primary btn-tweet" target="_blank"><i class="bi bi-twitter"></i> Tweet</a>
-          </div>
+        <div class="card" style="width: 20rem; height: fit-content">
+            <img src="/images/origin.png" class="card-img-top" />
+            <div class="card-body">
+                <!-- collection name -->
+                <h5 class="card-title">Moncock Open Edition</h5>
+                <h6 class="card-subtitle text-muted" id="supply">
+                    Minted: ...
+                </h6>
+                <div class="links">
+                    <!-- chain -->
+                    <img
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Monad Testnet"
+                        src="https://assets-global.website-files.com/647f71a77a2f4691b4fa23a7/647f71a77a2f4691b4fa2413_monad-fav-32x32_2.png"
+                    />
+                    <!-- contract -->
+                    <a
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Contract"
+                        href="https://sepolia.etherscan.io/address/0x136325681b0ca8cab9cef32dfa47bdbaae2c1bc9"
+                        target="_blank"
+                        ><img src="https://etherscan.io/images/favicon3.ico"
+                    /></a>
+                    <!-- opensea -->
+                    <a
+                        data-bs-toggle="tooltip"
+                        data-bs-title="OpenSea"
+                        href="https://testnets.opensea.io/collection/moncock-open-edition"
+                        target="_blank"
+                        ><img
+                            src="https://opensea.io/static/images/favicon/32x32.png"
+                    /></a>
+                </div>
+                <!-- description -->
+                <p class="card-text">We are Moncock</p>
+                <a id="connect" class="btn btn-primary w-100 disabled"
+                    >Connect Wallet</a
+                >
+                <!--input id="mint_qty" type="range" class="form-range d-none" min="1" max="1" step="1" value="1"-->
+                <a id="mint" class="btn btn-primary w-100 d-none">Mint</a>
+                <button
+                    id="minting"
+                    class="btn btn-primary w-100 d-none"
+                    type="button"
+                    disabled
+                >
+                    <span
+                        class="spinner-grow spinner-grow-sm"
+                        role="status"
+                        aria-hidden="true"
+                    ></span>
+                    Processing
+                </button>
+                <a id="msg" class="btn btn-primary w-100 d-none disabled"></a>
+                <div class="text-center mt-2">
+                    <a
+                        id="disconnect"
+                        class="text-secondary-emphasis d-none"
+                        role="button"
+                        >Disconnect 0xabc..789</a
+                    >
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.12.1/ethers.umd.min.js" integrity="sha512-e73T2EWkw8PZVlmYJl77YTCHY20/Z7oPCPOeKZGCulv9SEnLZEV3KLh27SJ9r0Q1HCPB/uVwnerv4b/Hkle6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
-    <script src="/js/config_oe.js"></script>
-    <script src="/js/abi_v3.js"></script>
-    <script src="/js/launchpad_v4_oe.js"></script>
-  </body>
+        <!-- modal -->
+        <div class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">🎉 Mint Successful</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-primary btn-tweet" target="_blank"
+                            ><i class="bi bi-twitter"></i> Tweet</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.12.1/ethers.umd.min.js"
+            integrity="sha512-e73T2EWkw8PZVlmYJl77YTCHY20/Z7oPCPOeKZGCulv9SEnLZEV3KLh27SJ9r0Q1HCPB/uVwnerv4b/Hkle6EA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+        <script src="/js/config_oe.js"></script>
+        <script src="/js/abi_v3.js"></script>
+        <script src="/js/launchpad_v4_oe.js"></script>
+    </body>
 </html>

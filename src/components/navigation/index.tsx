@@ -9,12 +9,12 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 const menuNav = [
-    { name: 'HOME', path: '/' },
-    { name: 'EVENT', path: '/event' },
-    { name: 'COMIC', path: '/comic' },
+    // { name: 'HOME', path: '/' },
+    // { name: 'EVENT', path: '/event' },
+    // { name: 'COMIC', path: '/comic' },
     { name: 'GAME', path: '/game' },
-    { name: 'MUSIC', path: '/music' },
-    { name: 'ABOUT ME', path: '/aboutMe' }
+    { name: 'MINT NFT', path: '/open-edition/index.html' }
+    // { name: 'ABOUT ME', path: '/aboutMe' }
 ];
 
 const Navbar: FC = () => {
