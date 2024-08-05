@@ -1,0 +1,4 @@
+html, body { height: 100%; background-color: #fdfaff; }
+.links { margin: 10px 0px; }
+.links img { height: 16px; }
+p.card-text { max-height: 100px; overflow: scroll; }
