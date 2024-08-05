@@ -2,3 +2,23 @@ html, body { height: 100%; background-color: #fdfaff; }
 .links { margin: 10px 0px; }
 .links img { height: 16px; }
 p.card-text { max-height: 100px; overflow: scroll; }
+.top-bar {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  height: 64px;
+  background-color: #361D45;
+}
+.top-bar div {
+  width: 65px;
+  text-align: center;
+  /*border-bottom: 1px solid #FFF;*/
+  padding: 7px;
+  margin: 11px 0px 0px 24px;
+}
+.top-bar a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
