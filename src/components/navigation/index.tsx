@@ -12,8 +12,10 @@ const menuNav = [
     // { name: 'HOME', path: '/' },
     // { name: 'EVENT', path: '/event' },
     // { name: 'COMIC', path: '/comic' },
-    { name: 'GAME', path: '/game' },
-    { name: 'MINT NFT', path: '/open-edition/index.html' }
+    { name: 'MONCOCK PUNCH', path: '/game' },
+    { name: 'MONCOCK RUN', path: '/moncock-run/index.html' },
+    // { name: 'MINT NFT', path: '/open-edition/index.html' }
+
     // { name: 'ABOUT ME', path: '/aboutMe' }
 ];
 
