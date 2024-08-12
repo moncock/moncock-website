@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 const menuNav = [
-    // { name: 'HOME', path: '/' },
+    { name: 'HOME', path: '/' },
     // { name: 'EVENT', path: '/event' },
     // { name: 'COMIC', path: '/comic' },
     { name: 'MONCOCK PUNCH', path: '/game' },

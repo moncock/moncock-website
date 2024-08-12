@@ -23,6 +23,7 @@
     ],
     "paths": {
       "@components/*": ["components/*"],
+      "@configs/*": ["configs/*"],
       "@contexts/*": ["contexts/*"],
       "@constant/*": ["constant/*"],
       "@constant": ["constant/index"],
