@@ -1,25 +1,43 @@
-html, body { height: 100%; background-color: #fdfaff; }
-.links { margin: 10px 0px; }
-.links img { height: 16px; }
-p.card-text { max-height: 100px; overflow: scroll; }
+/* topbar */
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('/assets/fonts/bebasNeue/BebasNeue-Regular.ttf');
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
 .top-bar {
   width: 100%;
   position: absolute;
   top: 0px;
-  height: 64px;
   background-color: #361D45;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-}
-.top-bar div {
-  width: 65px;
-  text-align: center;
-  /*border-bottom: 1px solid #FFF;*/
-  padding: 7px;
-  margin: 11px 0px 0px 24px;
+  padding: 19.15px 22px;
 }
 .top-bar a {
   color: #FFF;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 1.4663rem; /*1.283rem;*/
+  padding: 10px 12px;
+  margin-right: 1.25rem;
+  line-height: 1.9485;
+  letter-spacing: 0.43px;
 }
+.top-bar a.active {
+  color: #8A67B5;
+  border-bottom: 2px solid #8A67B5;
+}
+.top-bar a:hover {
+  color: #8A67B5;
+  border-bottom: 2px solid #8A67B5;
+}
+
+/* launchpad */
+html, body {
+  height: 100%;
+  background-color: #fdfaff;
+  font-family: BebasNeue;
+}
+.links { margin: 10px 0px; }
+.links img { height: 16px; }
+p.card-text { max-height: 100px; overflow: scroll; }
