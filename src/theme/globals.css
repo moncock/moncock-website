@@ -1,12 +1,15 @@
 html,
 body {
-    font-family: 'Satoshi';
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'BebasNeue';
     min-height: 100%;
+    background-color: #fdfaff;
 }
 
 @font-face {
-    font-family: 'Satoshi';
-    src: url(/assets/fonts/satoshi/Satoshi-Variable.ttf);
+    font-family: 'BebasNeue';
+    src: url('/assets/fonts/bebasNeue/BebasNeue-Regular.ttf');
     font-display: swap;
     font-style: normal;
     font-weight: normal;
@@ -17,7 +20,7 @@ body {
 }
 
 code {
-    font-family: 'Satoshi';
+    font-family: 'BebasNeue';
     padding: 0.1rem 0.4rem;
     font-size: 90%;
     color: #d400ff;

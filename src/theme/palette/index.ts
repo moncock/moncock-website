@@ -15,7 +15,7 @@ const DefaultPalette = (mode: Palette['mode'], skin: Skin): Palette => {
         } else if (skin === 'bordered' && mode === 'dark') {
             return darkPaperBgColor;
         } else if (mode === 'light') {
-            return '#F1F3F5';
+            return '#fdfaff';
         } else return '#25293C';
     };
 
@@ -37,16 +37,10 @@ const DefaultPalette = (mode: Palette['mode'], skin: Skin): Palette => {
             white: whiteColor
         },
         primary: {
-            light: '#8479F2',
-            main: '#7556E5',
-            dark: '#655BD3',
-            contrastText: whiteColor
+            main: '#361D45'
         },
         secondary: {
-            light: '#B2B4B8',
-            main: '#F1F3F5',
-            dark: '#949699',
-            contrastText: whiteColor
+            main: '#8A67B5'
         },
         error: {
             light: '#ED6F70',

@@ -1,7 +1,7 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 
 const typography: TypographyOptions = {
-    fontFamily: 'Satoshi',
+    fontFamily: 'BebasNeue',
     fontSize: 13.125,
     h1: {
         fontWeight: 500,
