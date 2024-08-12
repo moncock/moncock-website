@@ -14,7 +14,8 @@ const menuNav = [
     // { name: 'COMIC', path: '/comic' },
     { name: 'MONCOCK PUNCH', path: '/game' },
     { name: 'MONCOCK RUN', path: '/moncock-run/index.html' },
-    // { name: 'MINT NFT', path: '/open-edition/index.html' }
+    { name: 'MINT NFT', path: '/open-edition/index.html' },
+    { name: 'MINT NFT SAMPLE 1000', path: '/sample-1000/index.html' }
 
     // { name: 'ABOUT ME', path: '/aboutMe' }
 ];
@@ -22,7 +23,6 @@ const menuNav = [
 const Navbar: FC = () => {
     const [activeLink, setActiveLink] = useRecoilState<string>(activeLinkState);
 
-    console.log(activeLink);
     return (
         <AppBar position="static" sx={{ bgcolor: '#361D45' }}>
             <Container maxWidth="xl">
