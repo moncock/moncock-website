@@ -9,20 +9,20 @@ import EmotionCacheProvider from '@contexts/emotionCacheProvider';
 import { RecoilRoot } from '@store/index';
 
 type AppProviderProps = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 const AppProvider: FC<AppProviderProps> = ({ children }) => {
-    return (
-        <EmotionCacheProvider options={{ key: 'mui' }}>
-            <RecoilRoot>
-                <ThemeRegistry>
-                    <Navigation />
-                    {children}
-                </ThemeRegistry>
-            </RecoilRoot>
-        </EmotionCacheProvider>
-    );
+  return (
+    <EmotionCacheProvider options={{ key: 'mui' }}>
+      <RecoilRoot>
+        <ThemeRegistry>
+          <Navigation />
+          {children}
+        </ThemeRegistry>
+      </RecoilRoot>
+    </EmotionCacheProvider>
+  );
 };
 
 export default AppProvider;

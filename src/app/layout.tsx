@@ -1,6 +1,7 @@
 import AppProvider from '@contexts/appProvider';
 import '@theme/globals.css';
 import type { Metadata } from 'next';
+import { unstable_noStore as noStore } from 'next/cache';
 
 export const metadata: Metadata = {
     title: 'Moncock',
@@ -12,6 +13,8 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    noStore();
+
     return (
         <html lang="th">
             <body>
