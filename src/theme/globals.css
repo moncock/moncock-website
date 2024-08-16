@@ -1,41 +1,53 @@
 html,
 body {
-    max-width: 100vw;
-    overflow-x: hidden;
-    font-family: 'BebasNeue';
-    min-height: 100%;
-    background-color: #fdfaff;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'BebasNeue';
+  min-height: 100%;
+  background-color: #fdfaff;
 }
 
 @font-face {
-    font-family: 'BebasNeue';
-    src: url('/assets/fonts/bebasNeue/BebasNeue-Regular.ttf');
-    font-display: swap;
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'BebasNeue';
+  src: url('/assets/fonts/bebasNeue/BebasNeue-Regular.ttf');
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 #__next {
-    height: 100%;
+  height: 100%;
 }
 
 code {
-    font-family: 'BebasNeue';
-    padding: 0.1rem 0.4rem;
-    font-size: 90%;
-    color: #d400ff;
-    border-radius: 0.1335rem;
+  font-family: 'BebasNeue';
+  padding: 0.1rem 0.4rem;
+  font-size: 90%;
+  color: #d400ff;
+  border-radius: 0.1335rem;
 }
 code:not([class*='language-']):before,
 code:not([class*='language-']):after {
-    content: '`';
+  content: '`';
 }
 code[class*='language-'] {
-    padding: 0;
+  padding: 0;
+}
+
+#hud {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  color: white;
+  font-size: 24px;
 }
