@@ -51,3 +51,23 @@ code[class*='language-'] {
   color: white;
   font-size: 24px;
 }
+
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(80%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes swipeRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(20%);
+  }
+}
