@@ -21,6 +21,9 @@ const DefaultPalette = (mode: Palette['mode'], skin: Skin): Palette => {
 
   return {
     customColors: {
+      dark: darkColor,
+      main: mainColor,
+      light: lightColor,
       backgroundTeamSupport: '#FE80BF',
       backgroundFooter: '#A0F0ED',
     },
