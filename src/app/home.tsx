@@ -1,5 +1,5 @@
 'use client';
-import { Grid, Theme } from '@mui/material';
+import { Grid, Link, Theme, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import { useEffect, useState } from 'react';
@@ -11,46 +11,65 @@ const useStyles = makeStyles(
       flexDirection: 'column',
       alignItems: 'center',
     },
+    bannerContainer: {
+      height: 500,
+      backgroundColor: theme.palette.background.default,
+      width: '100%',
+    },
     galleryContainer: {
       backgroundColor: theme.palette.secondary.main,
       width: '100%',
       padding: theme.spacing(10),
       alignItems: 'center',
       display: 'flex',
+    },
+    galleryBoxSlideLeft: {
+      animation: `swipeLeft 10000ms linear infinite`,
+      display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'space-around',
+      marginBottom: 50,
     },
-    textEvent: {
-      fontSize: 80,
-      color: theme.palette.common.white,
-      textShadow: `8px 8px ${theme.palette.primary.main}`,
+    galleryBoxSlideRight: {
+      animation: `swipeRight 10000ms linear infinite`,
+      display: 'flex',
+      flexDirection: 'row',
     },
-    cardEvent: {
-      width: 180,
-      paddingTop: '10px',
-      paddingRight: '10px',
-      paddingLeft: '10px',
-      backgroundColor: theme.palette.primary.main,
-      borderRadius: '10px',
-      boxShadow: `5px 5px 20px ${theme.palette.grey[800]}`,
-      marginLeft: 20,
-    },
-    cardContent: {
-      justifyContent: 'center',
+    teamSupportContainer: {
+      backgroundColor: theme.palette.customColors.backgroundTeamSupport,
+      width: '100%',
+      paddingTop: theme.spacing(15),
+      paddingBottom: theme.spacing(20),
       alignItems: 'center',
       display: 'flex',
+      justifyContent: 'center',
     },
-    textItemEvent: {
+    textSupport: {
       color: theme.palette.common.white,
+      textDecoration: 'underline',
     },
-    buttonSeeMore: {
-      padding: '10px 50px 10px 50px',
-      backgroundColor: theme.palette.common.white,
-      color: theme.palette.common.black,
-      boxShadow: `5px 5px 5px ${theme.palette.grey[800]}`,
-      '&:hover': {
-        backgroundColor: theme.palette.grey[200],
-      },
+    boxTextSupport: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginLeft: 50,
+    },
+    footerContainer: {
+      backgroundColor: theme.palette.customColors.backgroundFooter,
+      width: '100%',
+      paddingTop: theme.spacing(15),
+      paddingBottom: theme.spacing(20),
+      alignItems: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    boxImg: {
+      display: 'flex',
+      width: 200,
+    },
+    img: {
+      height: '100%',
+      width: '100%',
     },
   }),
   {
@@ -83,55 +102,104 @@ export default function HomePage() {
   }
 
   return (
-    <Grid container className={classes.container} sx={{ mb: 8 }}>
-      <Grid
-        item
-        sx={{
-          height: 500,
-          backgroundColor: theme.palette.background.default,
-          width: '100%',
-        }}
-      ></Grid>
-
-      <Grid item container className={classes.galleryContainer}>
-        <Grid
-          item
-          style={{
-            animation: `swipeLeft 10000ms linear infinite`,
-            display: 'flex',
-            flexDirection: 'row',
-            marginBottom: 50,
-          }}
-        >
-          {listGallery?.map((item) => (
-            <Grid style={{ display: 'flex', width: 200 }}>
-              <img
-                style={{ height: '100%', width: '100%' }}
-                src={item}
-                alt={item}
-              />
-            </Grid>
-          ))}
+    <Grid container className={classes.container}>
+      <Grid item className={classes.bannerContainer}></Grid>
+      {!!listGallery && (
+        <Grid item container className={classes.galleryContainer}>
+          <Grid item className={classes.galleryBoxSlideLeft}>
+            {listGallery?.map((item) => (
+              <Grid key={item} className={classes.boxImg}>
+                <img className={classes.img} src={item} alt={item} />
+              </Grid>
+            ))}
+          </Grid>
+          <Grid item className={classes.galleryBoxSlideRight}>
+            {listGallery?.map((item) => (
+              <Grid key={item} className={classes.boxImg}>
+                <img className={classes.img} src={item} alt={item} />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      )}
+      <Grid item container className={classes.teamSupportContainer}>
+        <Grid item style={{ marginBottom: 50 }}>
+          <Typography
+            variant="h1"
+            style={{
+              textAlign: 'center',
+              color: theme.palette.common.white,
+              fontSize: 70,
+            }}
+          >
+            Team & Support
+          </Typography>
         </Grid>
         <Grid
           item
-          style={{
-            animation: `swipeRight 10000ms linear infinite`,
-            display: 'flex',
-            flexDirection: 'row',
-          }}
+          container
+          style={{ display: 'flex', justifyContent: 'center' }}
         >
-          {listGallery?.map((item) => (
-            <Grid style={{ display: 'flex', width: 200 }}>
+          <Grid
+            item
+            style={{
+              display: 'flex',
+              marginRight: 200,
+            }}
+          >
+            <Grid item className={classes.boxImg}>
               <img
-                style={{ height: '100%', width: '100%' }}
-                src={item}
-                alt={item}
+                className={classes.img}
+                src="./images/twit_logo.jpg"
+                alt="twit_logo"
               />
             </Grid>
-          ))}
+            <Grid item className={classes.boxTextSupport}>
+              <Link href="https://x.com/monad_xyz" underline="always">
+                <Typography variant="h2" className={classes.textSupport}>
+                  @monad_xyz
+                </Typography>
+              </Link>
+              <Link href="https://x.com/monadthailand" underline="always">
+                <Typography variant="h2" className={classes.textSupport}>
+                  @monadthailand
+                </Typography>
+              </Link>
+              <Link href="https://x.com/moncock_xyz" underline="always">
+                <Typography variant="h2" className={classes.textSupport}>
+                  @moncock_xyz
+                </Typography>
+              </Link>
+            </Grid>
+          </Grid>
+
+          <Grid
+            item
+            style={{
+              display: 'flex',
+            }}
+          >
+            <Grid item className={classes.boxImg}>
+              <img
+                className={classes.img}
+                src="./images/discord_logo.png"
+                alt="discord_logo"
+              />
+            </Grid>
+            <Grid item className={classes.boxTextSupport}>
+              <Typography variant="h2" className={classes.textSupport}>
+                Discord channel
+              </Typography>
+              <Link href="https://discord.gg/monad" underline="always">
+                <Typography variant="h2" className={classes.textSupport}>
+                  @Monad
+                </Typography>
+              </Link>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
+      <Grid item container className={classes.footerContainer}></Grid>
     </Grid>
   );
 }

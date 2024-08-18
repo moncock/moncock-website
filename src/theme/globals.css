@@ -58,16 +58,16 @@ code[class*='language-'] {
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-60%);
   }
 }
 
 @keyframes swipeRight {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-90%);
   }
 
   100% {
-    transform: translateX(20%);
+    transform: translateX(30%);
   }
 }
