@@ -7,17 +7,17 @@ declare global {
 export declare module '@mui/material/styles' {
   interface Palette {
     customColors: {
-      dark?: string;
-      main?: string;
-      light?: string;
-      bodyBg?: string;
-      trackBg?: string;
-      avatarBg?: string;
-      darkPaperBg?: string;
-      lightPaperBg?: string;
-      tableHeaderBg?: string;
-      backgroundTeamSupport?: string;
-      backgroundFooter?: string;
+      dark: string;
+      main: string;
+      light: string;
+      bodyBg: string;
+      trackBg: string;
+      avatarBg: string;
+      darkPaperBg: string;
+      lightPaperBg: string;
+      tableHeaderBg: string;
+      backgroundTeamSupport: string;
+      backgroundFooter: string;
     };
   }
   interface PaletteOptions {
