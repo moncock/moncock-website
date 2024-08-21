@@ -54,11 +54,11 @@ code[class*='language-'] {
 
 @keyframes swipeLeft {
   0% {
-    transform: translateX(80%);
+    transform: translateX(60%);
   }
 
   100% {
-    transform: translateX(-60%);
+    transform: translateX(-80%);
   }
 }
 

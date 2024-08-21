@@ -14,6 +14,9 @@ const useStyles = makeStyles(
     bannerContainer: {
       height: 500,
       backgroundColor: theme.palette.background.default,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       width: '100%',
     },
     galleryContainer: {
@@ -91,7 +94,12 @@ export default function HomePage() {
     'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_007.PNG?alt=media&token=2f8e2c0b-1d03-4961-92ee-e0ed4d991ae8',
     'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_008.PNG?alt=media&token=ac7d6d68-bd46-4f94-a77d-41187d3e64fc',
     'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_009.PNG?alt=media&token=fc919d98-68ec-41aa-b162-69c6d2cccecd',
-    'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_010.PNG?alt=media&token=c6502c3b-49d9-4569-915d-c7f4eb21c22a',
+    './images/pfp/Cckk_011.PNG',
+    './images/pfp/Cckk_018.PNG',
+    './images/pfp/Cckk_020.PNG',
+    './images/pfp/Cckk_042.jpeg',
+    './images/pfp/Cckk_056.png',
+    './images/pfp/Cckk_061.jpg',
   ];
   const [loading, setLoading] = useState(true);
 
@@ -103,7 +111,9 @@ export default function HomePage() {
 
   return (
     <Grid container className={classes.container}>
-      <Grid item className={classes.bannerContainer}></Grid>
+      <Grid item className={classes.bannerContainer}>
+        <Typography variant="h1">Coming Soon</Typography>
+      </Grid>
       {!!listGallery && (
         <Grid item container className={classes.galleryContainer}>
           <Grid item className={classes.galleryBoxSlideLeft}>
