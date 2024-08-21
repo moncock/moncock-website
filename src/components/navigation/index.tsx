@@ -9,7 +9,8 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 import { activeLinkState, useRecoilState } from '@store/index';
 import Link from 'next/link';
-import { FC } from 'react';
+import { usePathname } from 'next/navigation';
+import { FC, useEffect } from 'react';
 
 const useStyles = makeStyles(
   (theme: Theme) => ({
@@ -38,16 +39,24 @@ const Navbar: FC = () => {
   const theme = useTheme();
   const classes = useStyles();
   const [activeLink, setActiveLink] = useRecoilState<string>(activeLinkState);
+  const pathname = usePathname();
   const menuNav = [
     { name: 'HOME', path: '/' },
     // { name: 'EVENT', path: '/event' },
     // { name: 'COMIC', path: '/comic' },
     { name: 'MONCOCK PUNCH', path: '/game' },
     { name: 'MONCOCK RUN', path: '/moncock-run/index.html' },
-    { name: 'MINT NFT', path: '/open-edition/index.html' },
-    { name: 'MINT NFT SAMPLE 1000', path: '/sample-1000/index.html' },
+    // { name: 'MINT NFT OPEN EDITION', path: '/open-edition/index.html' },
+    // { name: 'MINT NFT W1', path: '/w1/index.html' },
     // { name: 'ABOUT ME', path: '/aboutMe' }
   ];
+
+  useEffect(() => {
+    const activeItem = menuNav.find((item) => item.path === pathname);
+    if (activeItem) {
+      setActiveLink(activeItem.name);
+    }
+  }, []);
 
   return (
     <AppBar
