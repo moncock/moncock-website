@@ -18,6 +18,8 @@ export declare module '@mui/material/styles' {
       tableHeaderBg: string;
       backgroundTeamSupport: string;
       backgroundFooter: string;
+      backgroundBanner: string;
+      backgroundGallery: string;
     };
   }
   interface PaletteOptions {
@@ -33,6 +35,8 @@ export declare module '@mui/material/styles' {
       tableHeaderBg?: string;
       backgroundTeamSupport?: string;
       backgroundFooter?: string;
+      backgroundBanner?: string;
+      backgroundGallery?: string;
     };
   }
 }

@@ -30,8 +30,10 @@ const DefaultPalette = (mode: Palette['mode'], skin: Skin): Palette => {
       trackBg: mode === 'light' ? '#F1F0F2' : '#363B54',
       avatarBg: mode === 'light' ? '#DBDADE' : '#4A5072',
       tableHeaderBg: mode === 'light' ? '#F6F6F7' : '#4A5072',
+      backgroundBanner: '#FDFDF3',
       backgroundTeamSupport: '#FE80BF',
-      backgroundFooter: '#A0F0ED',
+      backgroundFooter: '#FE80BF',
+      backgroundGallery: '#BF83E5',
     },
     mode: mode,
     common: {

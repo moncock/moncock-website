@@ -13,14 +13,14 @@ const useStyles = makeStyles(
     },
     bannerContainer: {
       height: 500,
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.customColors.backgroundBanner,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       width: '100%',
     },
     galleryContainer: {
-      backgroundColor: theme.palette.secondary.main,
+      backgroundColor: theme.palette.customColors.backgroundGallery,
       width: '100%',
       padding: theme.spacing(10),
       alignItems: 'center',
@@ -66,6 +66,10 @@ const useStyles = makeStyles(
       display: 'flex',
       justifyContent: 'center',
     },
+    boxImgMoncock: {
+      display: 'flex',
+      width: 300,
+    },
     boxImg: {
       display: 'flex',
       width: 200,
@@ -92,7 +96,6 @@ export default function HomePage() {
     'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_005.PNG?alt=media&token=92ce1a25-05ba-4431-af73-f5b06e45c856',
     'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_006.PNG?alt=media&token=afd718cd-35d7-4579-ac68-51a472327c59',
     'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_007.PNG?alt=media&token=2f8e2c0b-1d03-4961-92ee-e0ed4d991ae8',
-    'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_008.PNG?alt=media&token=ac7d6d68-bd46-4f94-a77d-41187d3e64fc',
     'https://firebasestorage.googleapis.com/v0/b/moncock-ba57f.appspot.com/o/moncock%2FCckk_009.PNG?alt=media&token=fc919d98-68ec-41aa-b162-69c6d2cccecd',
     './images/pfp/Cckk_011.PNG',
     './images/pfp/Cckk_018.PNG',
@@ -112,7 +115,22 @@ export default function HomePage() {
   return (
     <Grid container className={classes.container}>
       <Grid item className={classes.bannerContainer}>
-        <Typography variant="h1">Coming Soon</Typography>
+        <Grid item className={classes.boxImgMoncock}>
+          <img
+            className={classes.img}
+            src="./images/pfp/moncock_pic.png"
+            alt="twit_logo"
+          />
+        </Grid>
+        <Typography
+          style={{
+            fontSize: 120,
+            color: theme.palette.primary.main,
+            marginLeft: 20,
+          }}
+        >
+          Welcome moncock
+        </Typography>
       </Grid>
       {!!listGallery && (
         <Grid item container className={classes.galleryContainer}>
@@ -209,7 +227,7 @@ export default function HomePage() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item container className={classes.footerContainer}></Grid>
+      {/* <Grid item container className={classes.footerContainer}></Grid> */}
     </Grid>
   );
 }
