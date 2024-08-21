@@ -118,8 +118,8 @@ export default function HomePage() {
         <Grid item className={classes.boxImgMoncock}>
           <img
             className={classes.img}
-            src="./images/pfp/moncock_pic.png"
-            alt="twit_logo"
+            src="./images/pfp/moncock_pic.PNG"
+            alt="moncock_pic"
           />
         </Grid>
         <Typography
