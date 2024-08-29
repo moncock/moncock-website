@@ -46,6 +46,7 @@ const Navbar: FC = () => {
     // { name: 'COMIC', path: '/comic' },
     { name: 'MONCOCK PUNCH', path: '/game' },
     { name: 'MONCOCK RUN', path: '/moncock-run/index.html' },
+    { name: 'BEAT MONCOCK', path: '/beatmoncock/index.html' },
     // { name: 'MINT NFT OPEN EDITION', path: '/open-edition/index.html' },
     // { name: 'MINT NFT W1', path: '/w1/index.html' },
     // { name: 'ABOUT ME', path: '/aboutMe' }
